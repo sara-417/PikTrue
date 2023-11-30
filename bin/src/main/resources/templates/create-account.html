@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PikTrue - Login</title>
+    <title>PikTrue - Create Account</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@
             background-color: #f2f2f2;
         }
 
-         header {
+        header {
             background-color: #674ea7;
             color: #fff;
             padding: 10px;
@@ -25,11 +25,21 @@
 			height: 70px; /* Adjust the height as needed */
         }
 
-        #logo {
+		 #logo {
             width: 120px;
             height: 80px;
 			object-fit: contain; /* Prevent squishing */
             margin-right: 10px;
+        }
+
+        #logout-btn {
+            background-color: #000000;
+            color: #fff;
+            padding: 8px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
         .login-container {
@@ -61,7 +71,6 @@
             background-color: #674ea7;
             color: #fff;
             padding: 10px;
-			margin-bottom: 10px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -74,28 +83,27 @@
 </head>
 
 <body>
-	<header>
+     <header>
         <img id="logo" src="logo/Logo.jpg" alt="PicTrue Logo">
     </header>
 
     <div class="login-container">
-        <form action="/login" method="post">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
 
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
 
-            <div>
-                <button type="submit">Login</button> 
-                <button type="button" onclick="location.href='/create-account'">Create Account</button>
-            </div>
-        </form>
+        <button type="button" onclick="createNewAccount()">Create Account</button> 
     </div>
+
+    <script>
+		function createNewAccount() {
+			//!-- check that the username follows the database requirements and then insert a new user into the user table IF THE USER DOES NOT YET EXIST -->
+			//!-- once the new account has been created, redirect the user to the login screen so that they may log in with their new account -->
+		}
+		
+    </script>
 </body>
 
 </html>

@@ -27,6 +27,7 @@ public interface PictureRepository {
         "   user_name LIKE '%' || #{searchTerm} || '%'",
         "</if>",
         "</script>"})
+	
 @ResultMap("UserDataResult")
 public List<Picture> searchBar(@Param("searchTerm") String searchTerm);
 

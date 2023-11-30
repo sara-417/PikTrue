@@ -1,6 +1,5 @@
 package com.itc475.PikTrue.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,6 @@ public class PictureController {
 		return "image-display";
 	}
 
-	
 	@GetMapping("/searchBar")
 	public String searchBar(Model model, @RequestParam String searchTerm) {
 	    List<Picture> pictures = pictureRepo.searchBar(searchTerm);
